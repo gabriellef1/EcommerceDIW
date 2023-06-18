@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Importando estilos -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./public/css/main.css" />
+
+    <!-- Definindo favicon -->
+
+    <link rel="shortcut icon" href="./public/img/brand/logo.png" />
+
+    <title>Início | Loja da Gabs</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <!-- Navbar -->
+        <nav class="header--top-navbar">
+          <div class="header--top-navbar--left">
+            <a class="header--top-navbar--left-logo" href="#">
+              <img class="logo" src="./public/img/brand/logo2.png" alt="Logo" />
+            </a>            
+            <div class="header--top-navbar--left-content">
+              <div class="header--top-navbar--left-content--top">
+                <h1>Bem vinda, Gabrielle</h1>
+              </div>
+              <div class="header--top-navbar--left-content--bottom">
+                <input type="text" placeholder="Search" />
+                <button>
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="header--top-navbar--right">
+            <div class="header--top-navbar--right--top">
+              <ul>
+                <li>
+                  <a href="#"> Entrar </a>
+                </li>
+                <li>
+                  <a href="#"> Registrar </a>
+                </li>
+                <li>
+                  <a href="#"> Minha Conta </a>
+                </li>
+              </ul>
+            </div>
+            <div class="header--top-navbar--right--bottom">
+              <div class="header--top-navbar--right--bottom--right">
+                <p>Gabrielle L. F. Nascimento  <br> 1º Periodo de ADS - <br> PUC Barreiro</p>
+              </div>
+              <div class="header--top-navbar--right--bottom--left">
+                <button>
+                  <i class="fa-solid fa-shopping-cart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <!-- Hero -->
+        <div class="header--center-hero">
+          <div class="row">
+            <div class="col-lg-3">
+              <div class="header--center-hero-card">
+                <div class="header--center-hero-card--top">
+                  <h2>Pesquise o produto</h2>
+                  <p>Pesquise o produto pelo primeiro nome.</p>
+                </div>
+                <div class="header--center-hero-card--center">
+                  <div class="header--center-hero-card--center-select">
+                    <div class="header--center-hero-card--center-select-input">
+                      <label for="input1">  </label>
+                      <input
+                        type="text"
+                        name="input1"
+                        id="input1"
+                        placeholder="Nome do Produto"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="header--center-hero-card--bottom">
+                  <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    Search
+                  </button>
+                </div>
+                
+              </div>
+            </div>
+            <div class="col-lg-9">
+              <div
+                id="carouselExampleIndicators"
+                class="carousel slide"
+                data-ride="carousel"
+              >
+                <ol class="carousel-indicators">
+                  <li
+                    data-target="#carouselExampleIndicators"
+                    data-slide-to="0"
+                    class="active"
+                  ></li>
+                  <li
+                    data-target="#carouselExampleIndicators"
+                    data-slide-to="1"
+                  ></li>
+                  <li
+                    data-target="#carouselExampleIndicators"
+                    data-slide-to="2"
+                  ></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      class="d-block w-100"
+                      src="./public/img/brand/img.png" alt="Primeiro Slide" />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      class="d-block w-100"
+                      src="./public/img/brand/img2.png" alt="Segundo Slide" 
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      class="d-block w-100"
+                      src="./public/img/brand/img3.jpg" alt="Terceiro Slide"
+                    />
+                  </div>
+                </div>
+                <a
+                  class="carousel-control-prev"
+                  href="#carouselExampleIndicators"
+                  role="button"
+                  data-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a
+                  class="carousel-control-next"
+                  href="#carouselExampleIndicators"
+                  role="button"
+                  data-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9">
+            <section class="products">
+              <div class="row" id="product-list"></div>
+              <div class="row">
+              <div class="row my-4">
+                <div class="col-md-12">
+                  <nav aria-label="Page navigation">
+                    <ul class="pagination" id="pagination"></ul>
+                  </nav>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="col-lg-3">
+            <aside class="aside">
+              <div class="aside-products">
+                <div class="aside-products--top">
+                  <h1>Produtos mais visualizados</h1>
+                </div>
+                <div class="aside-products--center">
+                  <ul>
+                    <li>
+                      <div class="aside-products--center-item">
+                        <div class="aside-products--center-item--left">
+                          <img
+                            src="https://img.ltwebstatic.com/images3_pi/2021/07/21/1626858345f3be35670bc589a3bd57af31c05a7688_thumbnail_600x.webp"
+                            alt="Colar Serpente"
+                          />
+                        </div>
+                        <div class="aside-products--center-item--right">
+                          <h1>Colar Serpente</h1>
+
+                          <div class="products-card--stars">
+                            <p>&starf; &starf; &starf; &starf; &star;</p>
+                            <span> (5)</span>
+                          </div>
+                          <div class="products-card--prices">
+                            <p><span>R$</span> 30,90</p>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="aside-products--center-item">
+                        <div class="aside-products--center-item--left">
+                          <img
+                            src="https://img.ltwebstatic.com/images3_pi/2022/10/18/1666061571dbfa9881fa7f8f3bce0e1e4e1017a8bd_thumbnail_600x.webp"
+                            alt="Bolsa de Brilho"
+                          />
+                        </div>
+                        <div class="aside-products--center-item--right">
+                          <h1>Bolsa de Brilho</h1>
+
+                          <div class="products-card--stars">
+                            <p>&starf; &starf; &starf; &starf; &star;</p>
+                            <span> (5)</span>
+                          </div>
+                          <div class="products-card--prices">
+                            <p><span>R$</span> 59,99</p>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="aside-products--center-item">
+                        <div class="aside-products--center-item--left">
+                          <img
+                            src="https://img.ltwebstatic.com/images3_pi/2022/10/25/1666680050a77f28a93fea17b3a82a1673e6eb2003_thumbnail_600x.webp"
+                            alt="Colar olho grego"
+                          />
+                        </div>
+                        <div class="aside-products--center-item--right">
+                          <h1>Colar Olho Grego</h1>
+
+                          <div class="products-card--stars">
+                            <p>&starf; &starf; &starf; &starf; &starf;</p>
+                            <span> (5)</span>
+                          </div>
+                          <div class="products-card--prices">
+                            <p><span>R$</span> 19,99</p>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="aside-products--center-item">
+                        <div class="aside-products--center-item--left">
+                          <img
+                            src="https://img.ltwebstatic.com/images3_pi/2022/06/13/1655092603f0009726c97762d66263144f24df77e2_thumbnail_600x.webp"
+                            alt="Sandália Branca"
+                          />
+                        </div>
+                        <div class="aside-products--center-item--right">
+                          <h1>Sandália Branca</h1>
+
+                          <div class="products-card--stars">
+                            <p>&starf; &starf; &starf; &starf; &star;</p>
+                            <span> (5)</span>
+                          </div>
+                          <div class="products-card--prices">
+                            <p><span>R$</span> 79,99</p>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="aside-products--center-item">
+                        <div class="aside-products--center-item--left">
+                          <img
+                            src="https://img.ltwebstatic.com/images3_pi/2023/03/06/16780697084d14edc4d2fd20b23575e46deecf8e5c_thumbnail_600x.webp"
+                            alt="Mouse"
+                          />
+                        </div>
+                        <div class="aside-products--center-item--right">
+                          <h1>Colar Solitário</h1>
+
+                          <div class="products-card--stars">
+                            <p>&starf; &starf; &starf; &starf; &starf;</p>
+                            <span> (5)</span>
+                          </div>
+                          <div class="products-card--prices">
+                            <p><span>R$</span> 23,90</p>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="aside-newsletter">
+                <div class="aside-newsletter--top">
+                  <h1>Novidades</h1>
+                  <p>Se cadastre para as nossas novidades</p>
+                </div>
+                <div class="aside-newsletter--center">
+                  <input type="email" placeholder="Seu e-mail" />
+                </div>
+                <div class="aside-newsletter--bottom">
+                  <button>Subscribe</button>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h1>Loja da Gabs</h1>
+            <p>
+              Site desenvolvido para fins educacionais. Trabalho Prático 2 - Portal de eCommerce
+              <br>
+              Matéria: Desenvolvimento de Interfaces Web
+              <br>
+              Aluna: Gabrielle Lorrayne Fernandes Nascimento <br>
+              Curso: Análise e Desenvolvimento de Sistemas
+            </p>
+            <div>
+              <button>
+                <i class="fa-brands fa-facebook"></i>
+              </button>
+              <button>
+                <i class="fa-brands fa-instagram"></i>
+              </button>
+              <button>
+                <i class="fa-brands fa-youtube"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div>
+              <h1>Nossos métodos de pagamento</h1>
+              <img
+                src="https://cdn.webshopapp.com/shops/218525/files/371942398/payment-methods-epicerie-ludo.png"
+                alt="payment methods"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/b90180b038.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $(".carousel").carousel();
+    </script>
+
+    <script>
+     $(document).ready(function() {
+  const apiUrl = "https://fakestoreapi.com/products";
+  const productsPerPage = 6;
+  let currentPage = 1;
+  let totalProducts = 0;
+  let totalPages = 0;
+  let searchQuery = "";
+
+  function fetchProducts() {
+    const start = (currentPage - 1) * productsPerPage;
+    const end = start + productsPerPage;
+
+    $.get(apiUrl, function(products) {
+      let filteredProducts = products;
+
+      if (searchQuery !== "") {
+        filteredProducts = products.filter(function(product) {
+          return product.title.toLowerCase().includes(searchQuery);
+        });
+      }
+
+      totalProducts = filteredProducts.length;
+      totalPages = Math.ceil(totalProducts / productsPerPage);
+
+      const paginatedProducts = filteredProducts.slice(start, end);
+
+      displayProducts(paginatedProducts);
+      displayPagination();
+    });
+  }
+
+  function displayProducts(products) {
+        const productContainer = $("#product-list");
+        productContainer.empty();
+
+        for (const product of products) {
+          // Obtém as três primeiras palavras do título
+          const words = product.title.split(" ").slice(0, 3);
+          const shortenedTitle = words.join(" ");
+
+          const card = `<div class="col-md-4">
+            <div class="products-card" data-product-id="${product.id}">
+            <div class="products-card--header">
+                <img class="product-image" src="${product.image}" alt="${product.title}" />
+                <h1>${shortenedTitle}</h1> <!-- Exibe as três palavras do título -->
+            </div>
+            <div class="products-card--stars">
+                <p></span>
+            </div>
+            <div class="products-card--prices">
+                <p><span>R$</span> ${product.price}</p>
+            </div>
+            </div>
+            </div>
+            `;
+          productContainer.append(card);
+        }
+      }
+
+  function displayPagination() {
+    const paginationContainer = $("#pagination");
+    paginationContainer.empty();
+
+    if (totalPages > 1) {
+      for (let i = 1; i <= totalPages; i++) {
+        const listItemClass =
+          i === currentPage ? "page-item active" : "page-item";
+        const listItem = `<li class="${listItemClass}">
+          <a class="page-link" href="#" data-page="${i}">${i}</a>
+        </li>`;
+
+        paginationContainer.append(listItem);
+      }
+    }
+  }
+
+  $(document).on("click", ".page-link", function(e) {
+    e.preventDefault();
+    currentPage = parseInt($(this).data("page"));
+    fetchProducts();
+  });
+
+  fetchProducts();
+
+  $(document).on("click", ".products-card", function() {
+    const productId = $(this).data("product-id");
+    window.location.href = "detalhes.html?id=" + productId;
+  });
+
+  $("button").on("click", function() {
+    searchQuery = $("#input1").val().trim().toLowerCase();
+    currentPage = 1;
+    fetchProducts();
+  });
+});
+
+    </script>
+  </body>
+</html>

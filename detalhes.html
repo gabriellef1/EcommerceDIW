@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Detalhes do Produto</title>
+  <style>
+    .product-details {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .product-details img {
+      max-width: 300px;
+      height: auto;
+    }
+
+    .product-details h1 {
+      font-size: 24px;
+      margin-top: 0;
+    }
+
+    .product-details p {
+      margin-bottom: 10px;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      const productId = getUrlParameter("id");
+
+      if (productId) {
+        const apiUrl = "https://fakestoreapi.com/products/" + productId;
+
+        $.get(apiUrl, function(product) {
+          displayProductDetails(product);
+        });
+      }
+    });
+
+    function displayProductDetails(product) {
+      const productDetailsContainer = $("#product-details");
+      productDetailsContainer.empty();
+
+      const details = `
+        <div class="product-details">
+          <h1>${product.title}</h1>
+          <img src="${product.image}" alt="${product.title}" />
+          <p>${product.description}</p>
+          <p>Category: ${product.category}</p>
+          <p>Price: $${product.price}</p>
+        </div>
+      `;
+
+      productDetailsContainer.append(details);
+    }
+
+    function getUrlParameter(name) {
+      name = name.replace(/[[]/, "\\[").replace(/[\]]/, "\\]");
+      const regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
+      const results = regex.exec(location.search);
+      return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+  </script>
+</head>
+<body>
+  <div id="product-details"></div>
+</body>
+</html>
